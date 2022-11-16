@@ -115,14 +115,6 @@ def call(dest):
     return ('call', 0, *alu('lit', imm(0), imm(dest)))
 
 
-def start(alu):
-    return ('thread', 1, *alu)
-
-
-def stop(alu):
-    return ('thread', 0, *alu)
-
-
 def read(port, alu):
     return ('read', port, *alu)
 
